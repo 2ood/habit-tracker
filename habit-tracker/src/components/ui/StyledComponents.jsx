@@ -11,17 +11,22 @@ const PageWrapper = styled.div`
 `;
 
 const Container = styled.div`
-    display :grid;
-    grid-template : 1fr 3fr 1fr / 1fr;
+    display :inline-grid;
+    grid-template : 1fr / 1fr 3fr 1fr;
     position : relative;
+    min-height : 90vw;
+    width : 100%;
 `;
 
 const Column = styled.div`
     display : inline-flex;
+    padding : 40px;
 `;
 
 const Context = styled.div`
     display :inline-block;
+    background-color : var(--theme-secondary-color);
+    padding : 40px;
 `;
 
 export {PageWrapper, Container, Column, Context }
