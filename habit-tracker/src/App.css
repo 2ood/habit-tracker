@@ -1,6 +1,9 @@
 :root {
   --theme-primary-color : #484A4B;
   --theme-secondary-color : #E8E8E8;
+  --theme-back-color : #F6F8FA;
+  --theme-white : #FFFFFF;
+  --theme-black : #000000;
 
   --theme-h1-size :32px;
   --theme-h2-size :20px;
