@@ -74,6 +74,18 @@ const LogItemWrapper = styled.div`
     border : 1px solid var(--theme-secondary-color);
 `;
 
+const LogEmoticonWrapper = styled.div`
+    font-size : 50px;
+    text-align : center;
+`;
+
+const LogDetailsWrapper = styled.div`
+    display : inline-flex;
+    flex-direction : column;
+    margin-left : 10px;
+`;
+
+
 //AuthPage
 const AuthPageWrapper = styled.div`
     width : 100%;
@@ -87,6 +99,6 @@ const AuthMainForm = styled.div`
 `;
 
 export {PageWrapper, Container, Column, Context, LogViewWrapper,ControllerWrapper,ControlPanelWrapper}
-export {LogItemWrapper}
+export {LogItemWrapper, LogEmoticonWrapper, LogDetailsWrapper}
 export {TopbarWrapper}
 export {AuthPageWrapper, AuthMainForm}

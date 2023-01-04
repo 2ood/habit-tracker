@@ -21,5 +21,8 @@ h1 {font-size : var(--theme-h1-size);}
 h2 {font-size : var(--theme-h2-size);}
 h3 {font-size : var(--theme-h3-size);}
 p {font-size : var(--theme-p-size);}
-small {font-size : var(--theme-small-size);}
+small {
+  font-size : var(--theme-small-size);
+  color : var(--theme-primary-color);
+}
 

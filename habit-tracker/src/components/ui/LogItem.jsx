@@ -1,17 +1,22 @@
 import React from "react";
 
-import {LogItemWrapper} from "./StyledComponents";
+import {LogItemWrapper, LogEmoticonWrapper, LogDetailsWrapper} from "./StyledComponents";
 
 
 function LogItem(props) {
-
     function handleLogClick(){
 
     }
 
     return (
         <LogItemWrapper onClick={handleLogClick}>
-            Hello {props.content}
+            <LogEmoticonWrapper>
+            {props.hobby.emoji}
+            </LogEmoticonWrapper>
+            <LogDetailsWrapper>
+                <h2>{props.content.title}</h2>
+                <small>{props.content.desc}</small>
+            </LogDetailsWrapper>
         </LogItemWrapper>
     );
 
