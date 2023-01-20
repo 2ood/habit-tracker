@@ -3,6 +3,8 @@ import React, {useState} from "react";
 import * as Styled from "../styled/MainBodyFrame.style";
 import * as ViewStyle from "./ViewStyle";
 
+import log_jsons from "../test.json";
+
 
 const viewStyle = {
     log : "log",
@@ -11,99 +13,6 @@ const viewStyle = {
 
 function MainBody(props) {
     const [isLogView, setIsLogView ] = useState(true);
-    let log_jsons = {
-        "2023-01-02" : [
-            {   
-                key: 1, 
-                hobby : {
-                    num : 1,
-                    name : "guitar",
-                    emoji : "🎸",
-                },
-                content :{
-                    title : "Log1 Title",
-                    desc : "Log1 desc",
-                }
-            },
-            {
-                key: 2, 
-                hobby : {
-                    num : 1,
-                    name : "coffee",
-                    emoji : "☕",
-                },
-                content :{
-                    title : "Log2 Title",
-                    desc : "Log2 desc",
-                } 
-            }
-        ],
-        "2023-01-01" :[
-            {   
-                key: 3, 
-                hobby : {
-                    num : 1,
-                    name : "guitar",
-                    emoji : "🎸",
-                },
-                content :{
-                    title : "Log1 Title",
-                    desc : "Log1 desc",
-                }
-            },
-            {
-                key: 4, 
-                hobby : {
-                    num : 1,
-                    name : "coffee",
-                    emoji : "☕",
-                },
-                content :{
-                    title : "Log2 Title",
-                    desc : "Log2 desc",
-                }
-            }
-        ],
-        "2022-12-31" : [{   
-            key: 5, 
-            hobby : {
-                num : 1,
-                name : "guitar",
-                emoji : "🎸",
-            },
-            content :{
-                title : "Log1 Title",
-                desc : "Log1 desc",
-            },
-            datetime : '2023-01-02T14:51:00.000-07:00',
-        },
-        {
-            key: 6, 
-            hobby : {
-                num : 1,
-                name : "coffee",
-                emoji : "☕",
-            },
-            content :{
-                title : "Log2 Title",
-                desc : "Log2 desc",
-            },
-            datetime : '2023-01-01T14:51:00.000-07:00',    
-        },
-        {
-            key: 7, 
-            hobby : {
-                num : 3,
-                name : "run",
-                emoji : "🏃",
-            },
-            content :{
-                title : "Log3 Title",
-                desc : "Log3 desc",
-            },
-            datetime : '2023-01-01T14:51:00.000-07:00',    
-        }]
-    };
 
     function handleSelect(evt){
         console.log();
