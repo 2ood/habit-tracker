@@ -31,12 +31,12 @@ const Context = styled.div`
     background-color : var(--theme-back-color);
     padding : 40px;
 `;
-const ControllerWrapper = styled.div`
+const Controller = styled.div`
     display : inline-flex;
     gap : 10px;
 `;
 
-const ControlPanelWrapper = styled.div`
+const ControlPanel = styled.div`
     display : inline-flex;
     min-height : 20px;
     width : 100%;
@@ -45,7 +45,7 @@ const ControlPanelWrapper = styled.div`
 `;
 
 //LogView
-const LogViewWrapper = styled.div`
+const LogView = styled.div`
     display : flex;
     flex-direction : column;
     gap : 30px;
@@ -88,17 +88,26 @@ const LogDetailsWrapper = styled.div`
 
 //AuthPage
 const AuthPageWrapper = styled.div`
-    width : 100%;
-    height : 100%;
-    display : inline-block;
+    top : 0;
+    bottom : 0;
+    right : 0;
+    left : 0;
+    display : flex;
+    position : absolute;
+    justify-content : center;
+    align-items : center;
 `;
 
 const AuthMainForm = styled.div`
-    width : 300px;
-    height : 300px;
+    width : 400px;
+    height : 400px;
+    background-color : var(--theme-secondary-color);
+    color : var(--theme-primary-color);
+    border-radius : 15px;
+    padding : 30px;
 `;
 
-export {PageWrapper, Container, Column, Context, LogViewWrapper,ControllerWrapper,ControlPanelWrapper}
+export {PageWrapper, Container, Column, Context, LogView,Controller,ControlPanel}
 export {LogItemWrapper, LogEmoticonWrapper, LogDetailsWrapper}
 export {TopbarWrapper}
 export {AuthPageWrapper, AuthMainForm}

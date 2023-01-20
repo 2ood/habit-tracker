@@ -6,7 +6,7 @@ function LoginPage(props) {
     return  (
         <AuthPageWrapper>
             <AuthMainForm>
-                <p>This is Login Page.</p>
+            <p>This is Login Page.</p>
             </AuthMainForm>
         </AuthPageWrapper>
     );

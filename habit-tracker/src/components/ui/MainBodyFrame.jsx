@@ -1,7 +1,9 @@
 import React, {useState} from "react";
-import {Container, Column, Context, LogViewWrapper, ControlPanelWrapper, ControllerWrapper} from "./StyledComponents";
+import styled from "styled-components";
+import {Container, Column, Context, LogView, ControlPanel, Controller} from "./StyledComponents";
 
 import LogItem from "./LogItem";
+
 
 const viewStyle = {
     log : "log",
@@ -22,9 +24,9 @@ function LogViewContent(props){
     }
 
     return (
-        <LogViewWrapper>
+        <LogView>
             {list}
-        </LogViewWrapper>
+        </LogView>
     );
 } 
 
@@ -135,21 +137,35 @@ function MainBody(props) {
         setIsLogView(evt.target.value === viewStyle.log);
     }
 
+    const Select = styled.select`
+        padding : 10px;
+        border-radius : 10px;
+    `;
+
+    const Button = styled.button`
+        padding : 10px;
+        color : var(--theme-secondary-color);
+        background-color : var(--theme-primary-color);
+        outline : none;
+        border : none;
+        border-radius : 10px;
+    `;
+
     return (
         <Container>
             <Column>
             </Column>
             <Context>
-                <ControlPanelWrapper>
+                <ControlPanel>
                     <h1>Logs</h1>
-                    <ControllerWrapper>
-                        <select onChange={handleSelect}>
+                    <Controller>
+                        <Select onClick={handleSelect}>
                             <option value={viewStyle.log}>{viewStyle.log} view</option>
                             <option value={viewStyle.calendar}>{viewStyle.calendar} view</option>
-                        </select>
-                        <button onClick={()=>{}}>New Log</button>
-                    </ControllerWrapper>
-                </ControlPanelWrapper>
+                        </Select> 
+                        <Button onClick={()=>{}}>New Log</Button>
+                    </Controller>
+                </ControlPanel>
                 {isLogView?<LogViewContent jsons={log_jsons}/>:<CalendarViewContent jsons={log_jsons}/>}
             </Context>
             <Column>
