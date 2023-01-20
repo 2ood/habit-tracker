@@ -1,24 +1,26 @@
 import React from "react";
 
-import { AuthMainForm, AuthPageWrapper } from "../ui/StyledComponents";
+import * as Styled from "../styled/Auth.style";
 
 function LoginPage(props) {
     return  (
-        <AuthPageWrapper>
-            <AuthMainForm>
+        <Styled.AuthPage>
+            <Styled.AuthMainForm>
             <p>This is Login Page.</p>
-            </AuthMainForm>
-        </AuthPageWrapper>
+            </Styled.AuthMainForm>
+        </Styled.AuthPage>
     );
 }
 
 function RegisterPage(props) {
     return (
-        <AuthPageWrapper>
-            <AuthMainForm>
-                <p>This is Register Page.</p>
-            </AuthMainForm>
-        </AuthPageWrapper>
+        <Styled.AuthPage>
+            <Styled.AuthMainForm>
+            <h1>Register</h1>
+            <input type="text"></input>
+            <input type="password"></input>
+            </Styled.AuthMainForm>
+        </Styled.AuthPage>
     );
 }
 

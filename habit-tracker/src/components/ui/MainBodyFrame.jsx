@@ -1,40 +1,13 @@
 import React, {useState} from "react";
-import styled from "styled-components";
-import {Container, Column, Context, LogView, ControlPanel, Controller} from "./StyledComponents";
 
-import LogItem from "./LogItem";
+import * as Styled from "../styled/MainBodyFrame.style";
+import * as ViewStyle from "./ViewStyle";
 
 
 const viewStyle = {
     log : "log",
     calendar : "calendar"
 };
-
-function LogViewContent(props){
-    const log_jsons=props.jsons;
-
-    let list = [];
-
-    for (let key in log_jsons) {
-        list.push(key);
-        log_jsons[key].map((json)=>{
-            list.push(<LogItem key={json.key} content={json.content} datetime={json.datetime} hobby ={json.hobby}/>);
-            return 0;
-        });
-    }
-
-    return (
-        <LogView>
-            {list}
-        </LogView>
-    );
-} 
-
-function CalendarViewContent(props){
-    return (
-        <div>This is CalendarViewContent</div>
-    );
-} 
 
 function MainBody(props) {
     const [isLogView, setIsLogView ] = useState(true);
@@ -137,40 +110,26 @@ function MainBody(props) {
         setIsLogView(evt.target.value === viewStyle.log);
     }
 
-    const Select = styled.select`
-        padding : 10px;
-        border-radius : 10px;
-    `;
-
-    const Button = styled.button`
-        padding : 10px;
-        color : var(--theme-secondary-color);
-        background-color : var(--theme-primary-color);
-        outline : none;
-        border : none;
-        border-radius : 10px;
-    `;
-
     return (
-        <Container>
-            <Column>
-            </Column>
-            <Context>
-                <ControlPanel>
+        <Styled.Container>
+            <Styled.Column>
+            </Styled.Column>
+            <Styled.Context>
+                <Styled.ControlPanel>
                     <h1>Logs</h1>
-                    <Controller>
-                        <Select onClick={handleSelect}>
+                    <Styled.Controller>
+                        <Styled.Select onClick={handleSelect}>
                             <option value={viewStyle.log}>{viewStyle.log} view</option>
                             <option value={viewStyle.calendar}>{viewStyle.calendar} view</option>
-                        </Select> 
-                        <Button onClick={()=>{}}>New Log</Button>
-                    </Controller>
-                </ControlPanel>
-                {isLogView?<LogViewContent jsons={log_jsons}/>:<CalendarViewContent jsons={log_jsons}/>}
-            </Context>
-            <Column>
-            </Column>
-        </Container>
+                        </Styled.Select> 
+                        <Styled.Button onClick={()=>{}}>New Log</Styled.Button>
+                    </Styled.Controller>
+                </Styled.ControlPanel>
+                {isLogView?<ViewStyle.LogViewContent jsons={log_jsons}/>:<ViewStyle.CalendarViewContent jsons={log_jsons}/>}
+            </Styled.Context>
+            <Styled.Column>
+            </Styled.Column>
+        </Styled.Container>
     );
 }
 

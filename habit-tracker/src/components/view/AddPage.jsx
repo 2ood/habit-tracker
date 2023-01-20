@@ -1,23 +1,23 @@
 import React from "react";
 
-import { PageWrapper } from "../ui/StyledComponents";
+import * as Styled from "../styled/Common.style";
 
 
 function AddLogPage(props) {
 
     return (
-        <PageWrapper>
+        <Styled.Page>
             <p>This is Add Log Page.</p>
-        </PageWrapper>
+        </Styled.Page>
     );
 }
 
 function AddHobbyPage(props) {
     
     return (
-        <PageWrapper>
+        <Styled.Page>
             <p>This is Add Hobby Page.</p>
-        </PageWrapper>
+        </Styled.Page>
     );
 }
 

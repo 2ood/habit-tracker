@@ -1,6 +1,6 @@
 import React from "react";
 
-import {LogItemWrapper, LogEmoticonWrapper, LogDetailsWrapper} from "./StyledComponents";
+import * as Styled from "../styled/LogItem.style";
 
 
 function LogItem(props) {
@@ -9,15 +9,15 @@ function LogItem(props) {
     }
 
     return (
-        <LogItemWrapper onClick={handleLogClick}>
-            <LogEmoticonWrapper>
+        <Styled.LogItem onClick={handleLogClick}>
+            <Styled.LogEmoticon>
             {props.hobby.emoji}
-            </LogEmoticonWrapper>
-            <LogDetailsWrapper>
+            </Styled.LogEmoticon>
+            <Styled.LogDetails>
                 <h2>{props.content.title}</h2>
                 <small>{props.content.desc}</small>
-            </LogDetailsWrapper>
-        </LogItemWrapper>
+            </Styled.LogDetails>
+        </Styled.LogItem>
     );
 
 }

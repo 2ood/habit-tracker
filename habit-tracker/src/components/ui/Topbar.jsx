@@ -1,12 +1,12 @@
 import React from "react";
 
-import {TopbarWrapper} from "./StyledComponents";
+import * as Styled from "../styled/Common.style";
 
 function TopBar(props) {
     return (
-        <TopbarWrapper>
+        <Styled.Topbar>
             <p>This is Top Bar.</p>
-        </TopbarWrapper>
+        </Styled.Topbar>
     );
 }
 

@@ -2,14 +2,14 @@ import React from "react";
 
 import Topbar from "../ui/Topbar";
 import MainBodyFrame from "../ui/MainBodyFrame";
-import {PageWrapper} from "../ui/StyledComponents";
+import * as Styled from "../styled/Common.style";
 
 function MainPage(props) {
     return (
-        <PageWrapper>
+        <Styled.Page>
             <Topbar />
             <MainBodyFrame/>
-        </PageWrapper>
+        </Styled.Page>
     );
 }
 
